@@ -3,7 +3,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const ColorBox = props => {
+const ColorBox = (props) => {
   const colorStyle = {
     backgroundColor: props.hexCode,
   };

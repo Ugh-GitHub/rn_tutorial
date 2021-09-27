@@ -4,7 +4,6 @@ import React from 'react';
 import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
 import ColorBox from './components/ColorBox';
 
-
 const App = () => {
   return (
     <SafeAreaView>
@@ -22,20 +21,10 @@ const App = () => {
           Here are some boxes of different colors
         </Text>
       </View>
-      <View style={[styles.container, { backgroundColor: '#2aa198' }]}>
-        <Text style={styles.containerText}>Cyan: #2aa198</Text>
-      </View>
-      <View style={[styles.container, { backgroundColor: '#268bd2' }]}>
-        <Text style={styles.containerText}>Blue: #268bd2</Text>
-      </View>
-      <View style={[styles.container, { backgroundColor: '#d33682' }]}>
-        <Text style={styles.containerText}>Magenta: #d33682</Text>
-      </View>
-      <View style={[styles.container, { backgroundColor: '#cb4b16' }]}>
-        <Text style={styles.containerText}>Orange: #cb4b16</Text>
-      </View>
       <ColorBox hexCode="#2aa198" colorName="Cyan" />
-
+      <ColorBox hexCode="#268bd2" colorName="Blue" />
+      <ColorBox hexCode="#d33682" colorName="Magenta" />
+      <ColorBox hexCode="#cb4b16" colorName="Orange" />
     </SafeAreaView>
   );
 };
