@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
+import ColorBox from './components/ColorBox';
+
 
 const App = () => {
   return (
@@ -16,7 +18,9 @@ const App = () => {
     <View style={[styles.firstStyle, { backgroundColor: 'teal' }]} />
       */}
       <View style={styles.header}>
-        <Text style={{ fontWeight: 'bold' }}>Here are some boxes of different colors</Text>
+        <Text style={{ fontWeight: 'bold' }}>
+          Here are some boxes of different colors
+        </Text>
       </View>
       <View style={[styles.container, { backgroundColor: '#2aa198' }]}>
         <Text style={styles.containerText}>Cyan: #2aa198</Text>
@@ -30,6 +34,8 @@ const App = () => {
       <View style={[styles.container, { backgroundColor: '#cb4b16' }]}>
         <Text style={styles.containerText}>Orange: #cb4b16</Text>
       </View>
+      <ColorBox hexCode="#2aa198" colorName="Cyan" />
+
     </SafeAreaView>
   );
 };
@@ -41,7 +47,7 @@ const styles = StyleSheet.create({
     // backgroundColor: '#2aa198',
     marginHorizontal: 20,
     paddingHorizontal: 10,
-    marginVertical: 10,
+    marginVertical: 5,
     paddingVertical: 10,
     alignItems: 'center',
     color: 'white',
@@ -54,7 +60,7 @@ const styles = StyleSheet.create({
     // backgroundColor: '#2aa198',
     marginHorizontal: 10,
     paddingHorizontal: 10,
-    marginVertical: 0,
+    marginVertical: 5,
     paddingVertical: 0,
     alignItems: 'flex-start',
     paddingTop: 30,
@@ -66,7 +72,7 @@ const styles = StyleSheet.create({
   containerText: {
     color: 'white',
     fontWeight: 'bold',
-  }
+  },
 });
 
 // Cyan: #2aa198
