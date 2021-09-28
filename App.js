@@ -1,7 +1,7 @@
 // App.js
 
 import React from 'react';
-import { Text, SafeAreaView, StyleSheet, FlatList } from 'react-native';
+import { View, Text, SafeAreaView, StyleSheet, FlatList } from 'react-native';
 import ColorBox from './components/ColorBox';
 
 const COLORS = [
@@ -23,8 +23,6 @@ const COLORS = [
   { colorName: 'Green', hexCode: '#859900' },
 ];
 
-const FOODS = ['Apples', 'Broccoli', 'Cookies', 'Doritos', 'Eclairs'];
-
 const App = () => {
   return (
     <SafeAreaView>
@@ -37,6 +35,9 @@ const App = () => {
       OR
     <View style={[styles.firstStyle, { backgroundColor: 'teal' }]} />
       */}
+      <View>
+        <Text style={styles.header}>Here is a list of colors</Text>
+      </View>
 
       <FlatList
         data={COLORS}
