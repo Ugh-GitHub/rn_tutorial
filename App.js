@@ -1,8 +1,9 @@
 // App.js
 
 import React from 'react';
-import { View, Text, SafeAreaView, StyleSheet, FlatList } from 'react-native';
+import { Text, SafeAreaView, StyleSheet, FlatList } from 'react-native';
 import ColorBox from './components/ColorBox';
+import { NavigationContainer } from '@react-navigation/native';
 
 const COLORS = [
   { colorName: 'Base03', hexCode: '#002b36' },
@@ -25,32 +26,29 @@ const COLORS = [
 
 const App = () => {
   return (
-    <SafeAreaView>
-      {/* // Here's an example of how to use styles without a stylesheet
-    // <View style={{ backgroundColor: 'teal' }} />
-    // First set of brackets tells JSX passing an object, and the second is the actual object */}
+    <NavigationContainer>
+      <SafeAreaView>
+        {/* // Here's an example of how to use styles without a stylesheet
+      // <View style={{ backgroundColor: 'teal' }} />
+      // First set of brackets tells JSX passing an object, and the second is the actual object */}
 
-      {/* To add multiple styles to an element, can pass an array of StyleSheet objects like:
-    <View style={[styles.firstStyle, styles.secondStyle]} />
-      OR
-    <View style={[styles.firstStyle, { backgroundColor: 'teal' }]} />
-      */}
-      <View>
+        {/* To add multiple styles to an element, can pass an array of StyleSheet objects like:
+      <View style={[styles.firstStyle, styles.secondStyle]} />
+        OR
+      <View style={[styles.firstStyle, { backgroundColor: 'teal' }]} />
+        */}
+
         <Text style={styles.header}>Here is a list of colors</Text>
-      </View>
 
-      <FlatList
-        data={COLORS}
-        keyExtractor={(item) => item}
-        renderItem={({ item }) => (
-          <ColorBox hexCode={item.hexCode} colorName={item.colorName} />
-        )}
-      />
-      {/* <ColorBox hexCode="#2aa198" colorName="Cyan" />
-      <ColorBox hexCode="#268bd2" colorName="Blue" />
-      <ColorBox hexCode="#d33682" colorName="Magenta" />
-      <ColorBox hexCode="#cb4b16" colorName="Orange" /> */}
-    </SafeAreaView>
+        <FlatList
+          data={COLORS}
+          keyExtractor={(item) => item}
+          renderItem={({ item }) => (
+            <ColorBox hexCode={item.hexCode} colorName={item.colorName} />
+          )}
+        />
+      </SafeAreaView>
+    </NavigationContainer>
   );
 };
 
