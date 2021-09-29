@@ -62,15 +62,25 @@ const Home = ({ navigation }) => {
           }
         >
           <Text>{item.name}</Text>
-          <ColorSwatch hexCode={item.array[0].hexCode} />
-          <ColorSwatch hexCode={item.array[1].hexCode} />
-          <ColorSwatch hexCode={item.array[2].hexCode} />
-          <ColorSwatch hexCode={item.array[3].hexCode} />
-          <ColorSwatch hexCode={item.array[4].hexCode} />
+          <View style={styles.swatch}>
+            <ColorSwatch hexCode={item.array[0].hexCode} />
+            <ColorSwatch hexCode={item.array[1].hexCode} />
+            <ColorSwatch hexCode={item.array[2].hexCode} />
+            <ColorSwatch hexCode={item.array[3].hexCode} />
+            <ColorSwatch hexCode={item.array[4].hexCode} />
+          </View>
         </TouchableOpacity>
       )}
     />
   );
 };
+
+const styles = StyleSheet.create({
+  swatch: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+  },
+});
 
 export default Home;
