@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { block } from 'react-native-reanimated';
 
 const ColorSwatch = (props) => {
   const colorStyle = {
@@ -16,6 +15,11 @@ const styles = StyleSheet.create({
     height: 20,
     marginVertical: 5,
     marginHorizontal: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.3,
+    shadowRadius: 1,
+    elevation: 2,
   },
 });
 
