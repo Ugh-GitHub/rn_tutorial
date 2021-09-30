@@ -58,7 +58,7 @@ const Home = ({ navigation }) => {
     if (result.ok) {
       setPalette(palette);
     }
-  });
+  }, []);
 
   useEffect(() => {
     handleFetchColors();
