@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 // import { TouchableOpacity } from 'react-native-gesture-handler';
 // import ColorSwatch from '../components/ColorSwatch';
@@ -45,11 +45,29 @@ const COLOR_PALETTES = [
   { paletteName: 'Rainbow', colors: RAINBOW },
 ];
 
+// https://color-palette-api.kadikraman.now.sh/palettes
+
 const Home = ({ navigation }) => {
+  const [palette, setPalette] = useState([]);
+
+  const handleFetchColors = useCallback(async () => {
+    const result = await fetch(
+      'https://color-palette-api.kadikraman.now.sh/palettes',
+    );
+    const palette = await result.json();
+    if (result.ok) {
+      setPalette(palette);
+    }
+  });
+
+  useEffect(() => {
+    handleFetchColors();
+  }, []);
+
   return (
     <FlatList
       style={styles.list}
-      data={COLOR_PALETTES}
+      data={palette}
       keyExtractor={(item) => item.paletteName}
       renderItem={({ item }) => (
         <PalettePreview
