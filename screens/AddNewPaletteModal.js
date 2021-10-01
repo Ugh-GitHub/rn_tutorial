@@ -169,6 +169,8 @@ const AddNewPaletteModal = ({ navigation }) => {
       if (newValue === true) {
         setSelectedColors((current) => [...current, color]);
       } else {
+        // This function is going through the current array and removing any colorname 
+        // that is currently passing through the function
         setSelectedColors((current) =>
           current.filter((c) => c.colorName !== color.colorName),
         );
