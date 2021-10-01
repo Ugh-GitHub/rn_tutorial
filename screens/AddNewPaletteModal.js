@@ -204,7 +204,10 @@ const AddNewPaletteModal = ({ navigation }) => {
             <Text>{item.colorName}</Text>
             <Switch
               value={
+                //Note that !! is a shorthand for making the value a boolean,
+                //so !!undefined === false and !!{} === true.
                 !!selectedColors.find(
+                    // color is going through the array and comparing it to the specific item.colorName looking for a match
                   (color) => color.colorName === item.colorName,
                 )
               }
