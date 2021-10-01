@@ -9,7 +9,11 @@ import {
 import PalettePreview from '../components/PalettePreview';
 
 const URL = 'https://color-palette-api.kadikraman.now.sh/palettes';
-const Home = ({ navigation }) => {
+
+// To pass data from the other component need the route parameter (duh)
+const Home = ({ navigation, route }) => {
+  // If route.params exists, newPalette sets to route.params.newPalette, otherwisw null
+  const newPalette = route.params ? route.params.newPalette : null;
   const [palettes, setPalettes] = useState([]);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const handleFetchPalettes = useCallback(async () => {
@@ -29,6 +33,13 @@ const Home = ({ navigation }) => {
       setIsRefreshing(false);
     }, 1000);
   });
+
+  // Takes the existing palettes and adds a new one if newPalette. Not set to handle a lot of bugs
+  useEffect(() => {
+    if (newPalette) {
+      setPalettes((current) => [newPalette, ...current]);
+    }
+  }, [newPalette]);
 
   return (
     <>
