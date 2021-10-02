@@ -169,7 +169,7 @@ const AddNewPaletteModal = ({ navigation }) => {
       if (newValue === true) {
         setSelectedColors((current) => [...current, color]);
       } else {
-        // This function is going through the current array and removing any colorname 
+        // This function is going through the current array and removing any colorname
         // that is currently passing through the function
         setSelectedColors((current) =>
           current.filter((c) => c.colorName !== color.colorName),
@@ -209,7 +209,7 @@ const AddNewPaletteModal = ({ navigation }) => {
                 //Note that !! is a shorthand for making the value a boolean,
                 //so !!undefined === false and !!{} === true.
                 !!selectedColors.find(
-                    // color is going through the array and comparing it to the specific item.colorName looking for a match
+                  // color is going through the array and comparing it to the specific item.colorName looking for a match
                   (color) => color.colorName === item.colorName,
                 )
               }
