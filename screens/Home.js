@@ -2,9 +2,11 @@ import React, { useState, useEffect, useCallback } from 'react';
 import {
   StyleSheet,
   FlatList,
+  ScrollView,
   RefreshControl,
   Text,
   TouchableOpacity,
+  View
 } from 'react-native';
 import PalettePreview from '../components/PalettePreview';
 
