@@ -1,10 +1,10 @@
 # React-Native Tutorial
 Duration: 1 week (1-3 hours per day)  
 
-Description: A simple color palette app with the ability to add new palettes from a library of select swatches. Tutorial completed through [Front End Masters](https://frontendmasters.com/courses/react-native-v2/) by Kadi Kraman.
+Description: A simple color palette app with the ability to add new palettes from a library of select swatches and their hex codes. Tutorial completed through [Front End Masters](https://frontendmasters.com/courses/react-native-v2/) by Kadi Kraman.
 
 [![Image of Palette App Home Screen](assets/PaletteAppHomeScreen.png)](#)  
-[![Image of Palette App Add New Palette Screen](PaletteAppAddNewPaletteScreen.png)](#)
+[![Image of Palette App Add New Palette Screen](assets/PaletteAppAddNewPaletteScreen.png)](#)
 
 # Prerequisites
 This project uses the following:
@@ -41,7 +41,7 @@ Improvements:
 * Given that this was a tutorial without a specific user story behind it (or one that I can immediately think of as a frame of reference), the project seems sufficient at present.
 
 Impediments:
-* (2/7/22) Diffuclities deploying and retaining full functionality on Heroku.
+* (2/7/22) Difficulties deploying and retaining full functionality on Heroku.
 
 # Acknowledgement
 Thanks to [Kadi Kraman](https://github.com/kadikraman).
